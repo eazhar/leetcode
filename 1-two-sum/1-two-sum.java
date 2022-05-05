@@ -3,7 +3,6 @@ class Solution {
         int [] index = new int[2];
         HashMap <Integer, Integer> h  = new HashMap<>();
         
-        
         for(int i = 0; i<nums.length; i++){
             //for(int j = i+1; j<nums.length; j++){
         	int keyLookup = target-nums[i]; //check if the subtraction of target and current value is the key
