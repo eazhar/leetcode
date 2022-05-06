@@ -15,9 +15,11 @@ class Solution {
 
         for (Map.Entry<Integer, Integer> entry : h.entrySet())
         {
-            if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+            //if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+            if(Math.ceil(entry.getValue())>nums.length/2)
             {
-                maxEntry = entry;
+                //maxEntry = entry;
+                return (entry.getKey());
             }
         }
         return (maxEntry.getKey());
