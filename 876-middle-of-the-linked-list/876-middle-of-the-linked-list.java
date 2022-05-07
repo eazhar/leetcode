@@ -10,6 +10,10 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
+        //Todo: Code an optimal solution that is O(n) that uses a second pointer that goes double the distance for every single step of the slow pointer
+        
+        
+        //Brute force Technique
         int size = 0;
         ListNode currentNode = head;
         while(currentNode != null){
