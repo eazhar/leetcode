@@ -11,14 +11,14 @@
  */
 public class Solution {
     public boolean hasCycle(ListNode head) {
-        HashMap <ListNode, Integer> h = new HashMap<>();
+        HashMap <Integer, Integer> h = new HashMap<>();
         ListNode currentNode = head;
         while(currentNode!=null){
-            if(h.containsKey(currentNode)){
+            if(h.containsKey(currentNode.hashCode())){
                 return true;
             }
             else{
-                h.put(currentNode,1);
+                h.put(currentNode.hashCode(),1);
             }
             currentNode = currentNode.next;
         }
