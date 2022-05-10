@@ -15,11 +15,13 @@ class Solution {
             return;
         }
         
-        //grab the node 2 ahead
+        //grab the node 2 ahead (commented out, not great practice but testing to make sure logic is sound)
        // ListNode node_next_next = node.next.next;
         
         //replace current node value with next node value
         node.val = node.next.val;
+        
+        //middle node ignored and garbage collector deals with it
         
         //set current node's next to saved node
         node.next = node.next.next;
