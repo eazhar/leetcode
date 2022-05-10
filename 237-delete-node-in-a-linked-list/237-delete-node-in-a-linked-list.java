@@ -16,13 +16,13 @@ class Solution {
         }
         
         //grab the node 2 ahead
-        ListNode node_next_next = node.next.next;
+       // ListNode node_next_next = node.next.next;
         
         //replace current node value with next node value
         node.val = node.next.val;
         
         //set current node's next to saved node
-        node.next = node_next_next;
+        node.next = node.next.next;
         
         
         
