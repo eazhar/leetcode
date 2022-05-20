@@ -15,6 +15,7 @@ class Solution {
         
         returnNode = currentNode;
         
+        //added this to fix runtime error
         if(currentNode == null || currentNode.next == null){
             return head;
         }
