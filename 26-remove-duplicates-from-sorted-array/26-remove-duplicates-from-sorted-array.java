@@ -1,5 +1,5 @@
 class Solution {
-    public int removeDuplicates(int[] nums) {
+    public int removeDuplicates(int[] nums) {///
         HashMap <Integer, Integer> h = new LinkedHashMap<>();
         for(int i = 0; i<nums.length; i++){
             if(!h.containsKey(nums[i])){
