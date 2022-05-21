@@ -4,4 +4,5 @@
 localSum = Max(currentElement,currentElement+localSum)
 
 //keeps track of largest contiguous sum ever seen
+
 globalSum = Max(localSum, globalSum)
