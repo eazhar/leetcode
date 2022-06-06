@@ -10,7 +10,11 @@ class Solution {
         }
         int maxLength = 1;
         Set<Integer> values = new HashSet<Integer>();
-        values.addAll(IntStream.of(nums).boxed().collect(Collectors.toList()));
+        
+        for(int i = 0; i<nums.length; i++){
+            values.add(nums[i]);
+        }
+        //values.addAll(IntStream.of(nums).boxed().collect(Collectors.toList()));
         
         for(int i:values){
             if(!values.contains(i-1)){
