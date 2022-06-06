@@ -3,7 +3,7 @@ class Solution {
         
         //Option 1: Brute Force - start with element, seach for consective numbers below and above.  T: O(n^3) S: O(1)
         //Option 2: Sort Array first, look for consectives sequentially low to high T: O(nlog(n) + n) S: O(1) (modify input), O(n) otherwise
-        //Option 3: Use a set and store each value into the set and check for if its the smallest of the set
+        //Option 3: Use a set and store each value into the set and check for if its the smallest of the set T: O(n) S: O(n)
         
         if(nums.length <2){
             return nums.length;
@@ -14,6 +14,8 @@ class Solution {
         for(int i = 0; i<nums.length; i++){
             values.add(nums[i]);
         }
+        
+        //slightly faster conversion to set
         //values.addAll(IntStream.of(nums).boxed().collect(Collectors.toList()));
         
         for(int i:values){
