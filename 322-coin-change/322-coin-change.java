@@ -12,7 +12,7 @@ class Solution {
             }
         }
         
-        if(numWays[amount] != 99999){
+        if(numWays[amount] < 99999){
             return numWays[amount];
         }
         else{
