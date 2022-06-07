@@ -17,24 +17,17 @@ class Solution {
             }
 	        
 	        
-	        StringBuilder res = new StringBuilder();
+	        String res = new String();
 	        
 	        while(!dq.isEmpty()){
-	            res.append(dq.removeLast());
+	            res += (dq.removeLast());
 	        }
             
             while(res.length() > 1 && res.charAt(0) == '0'){
-                res.deleteCharAt(0);
+                res = res.substring(1,res.length());
             }
-            //System.out.println(res.length());
-//             if(res.length() == 2){
-                
-//                 return "0";
-//             }else{
-//                return res.replaceFirst("^0*", ""); 
-//             }
 	        
-            return res.toString();
+            return res;
 	        
 	    }
 }
