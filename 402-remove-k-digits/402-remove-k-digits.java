@@ -12,17 +12,18 @@ class Solution {
 	            dq.push(num.charAt(i)); 
 	        }
             
+            //if there is anything remaining in k, remove it
             for(int i = 0; i<k; i++){
                 dq.pop();
             }
 	        
-	        
+            //empty the deque/stack into the string
 	        String res = new String();
-	        
 	        while(!dq.isEmpty()){
 	            res += (dq.removeLast());
 	        }
             
+            //remove leading 0s
             while(res.length() > 1 && res.charAt(0) == '0'){
                 res = res.substring(1,res.length());
             }
