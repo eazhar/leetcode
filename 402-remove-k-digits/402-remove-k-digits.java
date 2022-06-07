@@ -17,15 +17,19 @@ class Solution {
                 dq.pop();
             }
 	        
+            //use StringBuilder to remove leading 0s
+            
             //empty the deque/stack into the string
 	        String res = new String();
 	        while(!dq.isEmpty()){
 	            res += (dq.removeLast());
+                //append() function for StringBuilder
 	        }
             
             //remove leading 0s
             while(res.length() > 1 && res.charAt(0) == '0'){
                 res = res.substring(1,res.length());
+                //removeCharAt(0) for StringBuilder
             }
 	        
             return res;
