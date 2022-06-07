@@ -1,7 +1,7 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
         int [] numWays = new int[amount+1];
-        Arrays.fill(numWays, 99999);
+        Arrays.fill(numWays, amount+1);
         numWays[0] = 0;
         
         for(int i = 1; i<(amount+1); i++){
@@ -12,7 +12,7 @@ class Solution {
             }
         }
         
-        if(numWays[amount] < 99999){
+        if(numWays[amount] < amount+1){
             return numWays[amount];
         }
         else{
