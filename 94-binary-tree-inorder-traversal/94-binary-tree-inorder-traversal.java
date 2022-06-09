@@ -15,19 +15,19 @@
  */
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
-        return inorderTraversalDFShelper(root, new ArrayList());
+        return inorderDFShelper(root, new ArrayList());
     }
-    List<Integer> inorderTraversalDFShelper(TreeNode root, ArrayList nodeValuesInOrder){
+    List<Integer> inorderDFShelper(TreeNode root, ArrayList list){
         if(root == null){
-            return nodeValuesInOrder;
+            return list;
         }
         
-        inorderTraversalDFShelper(root.left,nodeValuesInOrder);
-        nodeValuesInOrder.add(root.val);
-        inorderTraversalDFShelper(root.right,nodeValuesInOrder);
+        inorderDFShelper(root.left,list);
+        list.add(root.val);
+        inorderDFShelper(root.right,list);
         
         
         
-        return nodeValuesInOrder;
+        return list;
     }
 }
