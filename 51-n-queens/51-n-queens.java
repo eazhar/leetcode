@@ -36,7 +36,7 @@ class Solution {
             for(char[] i : board){
                 list.add(new String(i));
             }
-            //END second way
+            //END Third way
             
             result.add(list);
         }
