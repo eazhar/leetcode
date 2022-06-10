@@ -14,14 +14,29 @@ class Solution {
             
             //convert board from 2D char array to a string
             List<String> list = new LinkedList<>();
-            StringBuilder str;
-            for(char[] cs:board){
-                str = new StringBuilder();
-                for(char cur:cs){
-                    str.append(cur);
-                }
-                list.add(str.toString());
+            
+            //First Way
+            // StringBuilder str;
+            // for(char[] cs:board){
+            //     str = new StringBuilder();
+            //     for(char cur:cs){
+            //         str.append(cur);
+            //     }
+            //     list.add(str.toString());
+            // }
+            //END first way
+            
+            //second way
+            // for(int i = 0; i<board.length; i++){
+            //     list.add(new String(board[i]));
+            // }
+            //END second way
+            
+             //Third way
+            for(char[] i : board){
+                list.add(new String(i));
             }
+            //END second way
             
             result.add(list);
         }
