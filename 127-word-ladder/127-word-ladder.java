@@ -21,6 +21,8 @@ class Solution {
             System.out.println("Queue Size 1: " + queue.size());
             //we need to iterate across every word in the queue because it maintains
             //the order of processing the current level
+            
+            //GO BACKWARDS IN ITERATION BECAUSE THE QUEUE SIZE WILL MUTATE DURING THE LOOP!!!!!!!
             for(int i = queue.size(); i>0; i--){
                 System.out.println("Queue Size 2: " + queue.size());
                 //pull top entry from queue
