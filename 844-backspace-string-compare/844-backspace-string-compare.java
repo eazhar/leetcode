@@ -4,7 +4,6 @@ class Solution {
         Stack tempT = new Stack();
         
         for(int i = 0; i<s.length(); i++){
-            System.out.println("i: "+i + " current Char: " + s.charAt(i));
             if(s.charAt(i) == '#'){    
                 if(!tempS.isEmpty()){
                     System.out.println(tempS.pop());
@@ -29,10 +28,7 @@ class Solution {
         if(tempT.size() != tempS.size()){
             return false;
         }else{
-            while(!tempT.isEmpty()){
-                //System.out.println(tempS.peek());
-                //System.out.println(tempT.peek());
-                
+            while(!tempT.isEmpty()){                
                 if(!tempT.pop().equals(tempS.pop())){
                     return false;
                 }
