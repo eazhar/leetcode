@@ -16,6 +16,7 @@ class Solution {
                     
                p1--;
             }
+            // System.out.println(backCount);
             backCount = 0;
             while(p2 >= 0 && (backCount > 0 || t.charAt(p2) == '#')){
                 if(t.charAt(p2) == '#'){
@@ -27,9 +28,6 @@ class Solution {
                     
                 p2--;
             }
-            
-            // System.out.println("p1: "+ p1);// + "s.p1: " + s.charAt(p1));
-            // System.out.println("p2: "+ p2);// + "t.p2: " + t.charAt(p2));
                 
             if(p1 >= 0 && p2 >= 0){
                 if(s.charAt(p1) != t.charAt(p2)){
