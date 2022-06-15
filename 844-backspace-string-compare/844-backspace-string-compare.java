@@ -28,8 +28,8 @@ class Solution {
                 p2--;
             }
             
-            System.out.println("p1: "+ p1);// + "s.p1: " + s.charAt(p1));
-            System.out.println("p2: "+ p2);// + "t.p2: " + t.charAt(p2));
+            // System.out.println("p1: "+ p1);// + "s.p1: " + s.charAt(p1));
+            // System.out.println("p2: "+ p2);// + "t.p2: " + t.charAt(p2));
                 
             if(p1 >= 0 && p2 >= 0){
                 if(s.charAt(p1) != t.charAt(p2)){
@@ -40,10 +40,8 @@ class Solution {
                    p2--;
                 }
 
-            }else {
-                if(p1 >= 0 || p2 >= 0){
+            }else if(p1 >= 0 || p2 >= 0){
                     return false;
-                }
             }
         }
         return true;
