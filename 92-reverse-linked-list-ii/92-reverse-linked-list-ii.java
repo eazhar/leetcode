@@ -13,7 +13,6 @@ class Solution {
                 
         ListNode prevNode=null, currentNode = head, nextNode=null;
         ListNode p1=new ListNode();
-        ListNode p2 = null;
         
         if(currentNode.next == null || left==right){
             return head;
