@@ -12,42 +12,51 @@
 public class Solution {
     public ListNode detectCycle(ListNode head) {
         
+        ListNode p1 = head; //slow pointer
+        ListNode p2 = null; //fast pointer
         
-        HashSet <ListNode> h = new HashSet<>();
-        ListNode currentNode = head;
-        while(currentNode!=null){
-            if(h.contains(currentNode)){
-                return currentNode;
-            }
-            else{
-                h.add(currentNode);
-            }
-            currentNode = currentNode.next;
+        if(p1 == null || p1.next == null ){
+            return null;
         }
-        return null;
-        
-//         ListNode p1 = head;
-//         ListNode p2 = null;
-        
-//         if(p1 == null || p1.next == null ){
-//             return null;
-//         }
-//         p2 = p1.next;
-//         while(p2.next!=null && p2.next.next != null){
+        p2 = p1;
+        while(true){
             
-//             //This structure is actually slower (but more readable)?
-//             if(p2.next == null || p2.next.next == null){
-//                            return null;
-//                        }
+            p1 = p1.next;
+            p2 = p2.next;
             
-//             if(p1 == p2){
-//                 return p2;
-//             }
-//             p1 = p1.next;
-//             p2 = p2.next.next;
+            //This structure is actually slower (but more readable)?
+            if(p2.next == null || p2.next.next == null){
+                   return null;
+            }else{
+                 p2 = p2.next;
+            }
             
+            if(p1 == p2){
+                break;
+            }
             
-//         }
-//         return null;
+            //System.out.println("hello");
+            
+        }
+        p1 = head;
+        while(p2 != p1){
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        return p1;
     }
 }
+
+//OLD SOLN
+        // HashSet <ListNode> h = new HashSet<>();
+        // ListNode currentNode = head;
+        // while(currentNode!=null){
+        //     if(h.contains(currentNode)){
+        //         return currentNode;
+        //     }
+        //     else{
+        //         h.add(currentNode);
+        //     }
+        //     currentNode = currentNode.next;
+        // }
+        // return null;
