@@ -19,16 +19,14 @@ public class Solution {
             return null;
         }
         p2 = p1;
-        while(true){
+        while(p2 != null && p2.next != null ){
             
             p1 = p1.next;
-            p2 = p2.next;
+            p2 = p2.next.next;
             
             //This structure is actually slower (but more readable)?
-            if(p2.next == null || p2.next.next == null){
+            if( p2 == null || p2.next == null){
                    return null;
-            }else{
-                 p2 = p2.next;
             }
             
             if(p1 == p2){
