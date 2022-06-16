@@ -22,14 +22,23 @@ public class Solution {
             p2 = p1.next;
         }
         while(p2!=null){
-            if(p2.next == null || p2.next.next == null){
-                return false;
+            if(p2.next != null){
+                if(p2.next.next != null){
+                   //do nothing 
+                }
+                else{
+                    return false;
+                }
+            }else{
+                    return false;
             }
             if(p1 == p2){
                 return true;
             }
             p1 = p1.next;
             p2 = p2.next.next;
+            
+            
         }
         return false;
     }
