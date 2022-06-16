@@ -6,7 +6,11 @@ class Solution {
     public String minRemoveToMakeValid(String s) {
         // ArrayList <int []> x = new ArrayList();
         Stack <Integer> s1 = new Stack<>(); //main stack
-        Stack <Integer> s2 = new Stack<>(); //garbage stack
+        
+        char [] ch = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        
+        // Stack <Integer> s2 = new Stack<>(); //garbage stack
         
         for(int i = 0; i<s.length(); i++){
             if(s.charAt(i) == ')'){
@@ -14,7 +18,7 @@ class Solution {
                     s1.pop();
                 }
                 else{
-                    s2.push(i);
+                    ch[i] = '*';
                 }
             }
             if(s.charAt(i) == '('){
@@ -24,13 +28,15 @@ class Solution {
         
         while(!s1.isEmpty()){
             int index = s1.pop();
-            s = s.substring(0,index)+s.substring(index+1,s.length());
-        }
-        while(!s2.isEmpty()){
-            int index = s2.pop();
-            s = s.substring(0,index)+s.substring(index+1,s.length());
+            ch[index] = '*';
         }
         
-        return s;
+        for(char c: ch){
+            if(c != '*'){
+                sb.append(c);
+            }
+        }
+        
+        return sb.toString();
     }
 }
