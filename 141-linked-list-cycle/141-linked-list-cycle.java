@@ -21,21 +21,21 @@ public class Solution {
         while(p2.next!=null && p2.next.next != null){
             
             //This structure is actually slower (but more readable)?
-            if(p2.next == null || p2.next.next == null){
-                           return false;
-                       }
+            // if(p2.next == null || p2.next.next == null){
+            //                return false;
+            //            }
             
             //Faster? structure
-            // if(p2.next != null){
-            //     if(p2.next.next != null){
-            //        //do nothing 
-            //     }
-            //     else{
-            //         return false;
-            //     }
-            // }else{
-            //         return false;
-            // }
+            if(p2.next != null){
+                if(p2.next.next != null){
+                   //do nothing 
+                }
+                else{
+                    return false;
+                }
+            }else{
+                    return false;
+            }
             
             
             if(p1 == p2){
