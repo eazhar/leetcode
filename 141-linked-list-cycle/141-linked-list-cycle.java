@@ -30,8 +30,6 @@ public class Solution {
             }
             p1 = p1.next;
             p2 = p2.next.next;
-            
-            
         }
         return false;
     }
